@@ -1,0 +1,219 @@
+/* common.css  */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+a {
+  color: #333;
+  text-decoration: none;
+  border-bottom: 1px solid;
+}
+a:hover {
+  color: red;
+}
+body {
+  font: 14px/1.5 Arial;
+  background-color: #eee;
+  margin: 20px 0;
+}
+
+article {
+  width: 21cm;
+  max-width: 900px;
+  background: #fff;
+  margin: 0 auto;
+  overflow: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+article .header,
+.PersonalAssessment,
+footer {
+  width: 100%;
+  text-align: center;
+}
+
+article .header,
+aside>section,
+main>section,
+.PersonalAssessment {
+  margin: 15px 20px 0 20px;
+  border-bottom: 1px solid #ccc;
+  padding: 20px;
+}
+
+article .header {
+  /* width: 100%;
+  text-align: center; */
+  padding: 5px 0 5px 0;
+  /* margin: 15px 20px 0 20px;
+  border-bottom: 1px solid #ccc; */
+} 
+article .header img {
+  display: block;  /* 把img图片下方一个3px的白色空隙消除 */
+  margin: 0 auto;
+  width: 120px;
+  height: 120px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+}
+
+article .header h1 {
+  margin-top: 10px;
+  font-size: 25px;
+}
+article .header p {
+  color: #aaa;
+}
+
+aside {
+  width: 300px;
+  border-right: 1px solid #ccc;
+}
+/* aside>section, */
+main>section {
+  /* background-color: #eee;  */
+  border-bottom: none;
+  /* margin: 15px 20px 0 20px;
+  padding: 20px; */
+}
+aside>section>h2,
+main>section>h2,
+.PersonalAssessment>h2 {
+  margin-bottom: 10px;
+}
+
+section .item span {
+  display: inline-block;
+  margin-top: 5px;
+}
+section span i {
+/* width: 16px; */
+  color: gray;
+}
+
+aside section .skills .item {
+  display: flex;
+  align-items: center;
+}
+
+aside section .skills span:first-child {
+  width: 75px;
+  color: #555;
+}
+
+aside section .skills span:last-child {
+  flex: 1;
+  height: 6px;
+  background-color: #ccc;
+}
+
+aside section .skills span:last-child i {
+  display: block;
+  width: 10%;
+  height: 6px;
+  background-color: #666;
+}
+
+aside section:last-child {
+  border-bottom: none;
+}
+
+aside section .contact-way,
+aside section .skills,
+aside section .hobbies,
+aside section .more {
+  margin-left: 15px;
+}
+
+
+main {
+  flex: 1;
+  background-color: #ffffff;
+}
+/* main section.PersonalAssessment{
+  border-bottom: none;
+} */
+main>section>h2 {
+  padding-bottom: 10px;
+  /* border-bottom: 1px solid #ccc; */
+}
+main section .item {
+  margin-bottom: 10px;
+}
+main section .item h3 {
+  margin-bottom: 10px;
+}
+main section .item ul {
+  margin-left: 25px;
+}
+
+
+.PersonalAssessment {
+  /* background-color: red; */
+  /* width: 100%;
+  text-align: center; */
+  border-top: 1px solid #ccc;
+  border-bottom: none;
+}
+
+footer {
+  /* width: 100%;
+  text-align: center; */
+  background-color: lightgray;
+  color: #aaa;
+}
+
+/* 当屏幕宽度小于768px时的样式效果 */
+@media (max-width: 768px) {
+  article {
+    width: auto;
+    min-width: 280px;
+  }
+  article .header img {
+    width: 100px;
+    height: 100px;
+  }
+  aside {
+    width: 100%;
+    border-right: none;
+  }
+  section h2 {
+    margin-bottom: 10px;
+  }
+  .skills .item {
+    width: 400px;
+  }
+  aside section .contact-way,
+  aside section .skills,
+  aside section .hobbies,
+  aside section .more {
+    margin-left: 25px;
+  }
+  aside section:last-child {
+    border-bottom: 1px solid #ccc;
+    display: none;
+  }
+} 
+
+/* 当屏幕宽度小于500px时的样式效果 */
+@media (max-width: 500px) {
+  aside section .contact-way .item,
+  aside section .skills .item,
+  aside section .hobbies .item,
+  aside section .more .item {
+    /* background-color: red; */
+    width: 100%;;
+  }
+  /* .skills .item {
+    width: 300px;
+  } */
+  aside section .contact-way,
+  aside section .skills,
+  aside section .hobbies,
+  aside section .more {
+    margin-left: 15px;
+  }
+}
